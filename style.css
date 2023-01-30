@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: rgb(36,11,111);
+    background: radial-gradient(circle, rgba(36,11,111,1) 10%, rgba(81,24,121,1) 53%, rgba(0,0,0,1) 95%);
+    background-size: cover;
+    background-position: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    align-items: right;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+
+.logo{
+    width: 200px;
+    cursor: pointer;
+}
+
+.img{
+    height: 550px;
+    width: 550px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+nav ul{
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after{
+    width: 50%;
+}
+
+.text-box{
+    color:#fff;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-box p{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.text-box h1{
+    font-size: 190px;
+    line-height: 160px;
+    margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(images/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.text-box h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.resume{
+    position: absolute;
+    top: 8%;
+    padding-left: 20%;
+    width: 100%;
+    height: 92%;
+}
+
+.resume h1{
+    position: absolute;
+    left: 65%;
+    top: 30%;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.resume p{
+    position: absolute;
+    left: 68%;
+    top: 40%;
+    color: #fff;
+}
+
+.resume a:link{
+    color: red;
+}
+
+.resume a:visited{
+    color: black;
+}
+
+.contact-info{
+    padding: 0;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 700px;
+    
+    
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-family: "montserrat", sans-serif;
+}
+
+.card{
+    background: #636e72;
+    padding: 0 20px;
+    margin: 0 10px;
+    width: calc(33% - 20px);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-icon{
+    font-size: 28px;
+    background: #511879;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px !important;
+    border-radius: 50%;
+    transition: 0.3s linear;
+}
+
+.card:hover .card-icon{
+    background: none;
+    color: #511879;
+    transform: scale(1.6);
+}
+
+.card p{
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    max-height: 0;
+    opacity: 0;
+    transition: 0.3s linear;
+    color: #fff;
+}
+
+.card:hover p{
+    max-height: 40px;
+    opacity: 1;
+}
+
+@media screen and (max-width:800px) {
+    .contact-info{
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+    
+}
