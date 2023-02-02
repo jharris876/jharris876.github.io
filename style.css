@@ -207,3 +207,87 @@ nav ul li a:hover::after{
         margin: 10px 0;
     }
 }
+
+form{
+    
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);  
+}
+
+.input-group{
+    margin-bottom: 30px;
+    position: relative;
+    color: #fff;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    font-size: 15px;
+}
+
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #fff;
+    cursor: text;
+    transition: 0.2s;
+}
+
+button{
+    padding: 10px 0;
+    color: #fff;
+    outline: none;
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    cursor: pointer;
+}
+
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row .input-group{
+    flex-basis: 48%;
+}
+
+.contact-h1{
+    width: 800px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-40%, -80%);  
+    color: #fff;
+    text-decoration: underline;
+}
+
+.contact-h2{
+    width: 900px;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+    transform: translate(-45%, -50%);  
+    color: #fff;
+    text-decoration: underline;
+}
