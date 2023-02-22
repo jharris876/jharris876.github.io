@@ -115,6 +115,14 @@ nav ul li a:hover::after{
     height: 92%;
 }
 
+.resume-img{
+    position: absolute;
+    transform: scale(0.39);
+    right: 15%;
+    height: 0px;
+    
+}
+
 .resume h1{
     position: absolute;
     left: 65%;
